@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlternovaAPI", "AlternovaAPI\AlternovaAPI.csproj", "{DF1F6A7E-336B-4B51-873B-3399A9756B37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlternovaData", "AlternovaData\AlternovaData.csproj", "{C11ECBD1-4B13-4AD5-BAD2-E4B9BB421CB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlternovaTest", "AlternovaTest\AlternovaTest.csproj", "{83E198E3-4E89-42E3-A0E4-79DEC0123F59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlternovaBusiness", "AlternovaBusiness\AlternovaBusiness.csproj", "{2EBE495D-FBDC-4576-B056-E64F4DE1CBAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF1F6A7E-336B-4B51-873B-3399A9756B37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF1F6A7E-336B-4B51-873B-3399A9756B37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF1F6A7E-336B-4B51-873B-3399A9756B37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF1F6A7E-336B-4B51-873B-3399A9756B37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C11ECBD1-4B13-4AD5-BAD2-E4B9BB421CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C11ECBD1-4B13-4AD5-BAD2-E4B9BB421CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C11ECBD1-4B13-4AD5-BAD2-E4B9BB421CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C11ECBD1-4B13-4AD5-BAD2-E4B9BB421CB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83E198E3-4E89-42E3-A0E4-79DEC0123F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83E198E3-4E89-42E3-A0E4-79DEC0123F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83E198E3-4E89-42E3-A0E4-79DEC0123F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83E198E3-4E89-42E3-A0E4-79DEC0123F59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EBE495D-FBDC-4576-B056-E64F4DE1CBAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EBE495D-FBDC-4576-B056-E64F4DE1CBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EBE495D-FBDC-4576-B056-E64F4DE1CBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EBE495D-FBDC-4576-B056-E64F4DE1CBAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

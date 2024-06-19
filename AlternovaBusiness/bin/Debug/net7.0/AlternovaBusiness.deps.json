@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "AlternovaBusiness/1.0.0": {
+        "dependencies": {
+          "AlternovaData": "1.0.0"
+        },
+        "runtime": {
+          "AlternovaBusiness.dll": {}
+        }
+      },
+      "AlternovaData/1.0.0": {
+        "runtime": {
+          "AlternovaData.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AlternovaBusiness/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AlternovaData/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
