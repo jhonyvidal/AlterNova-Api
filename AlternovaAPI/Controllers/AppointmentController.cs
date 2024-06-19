@@ -2,7 +2,7 @@ using Appointment.Core.Interface;
 using Microsoft.AspNetCore.Mvc;
 // using Wheelzy.Core.Services;
 
-namespace Appointment.API.Controllers;
+namespace AlternovaAPI.Controllers;
 
 [ApiController]
 [Route("[controller]/[action]")]

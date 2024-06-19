@@ -1,5 +1,3 @@
-// using Appointment.Business.Services;
-
 using Appointment.Business.DTO;
 
 namespace Appointment.Core.Interface;

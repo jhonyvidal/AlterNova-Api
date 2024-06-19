@@ -10,3 +10,5 @@ D:\Desarrollo C#\AlertNova Technical Assessment\AlternovaData\obj\Debug\net7.0\A
 D:\Desarrollo C#\AlertNova Technical Assessment\AlternovaData\obj\Debug\net7.0\refint\AlternovaData.dll
 D:\Desarrollo C#\AlertNova Technical Assessment\AlternovaData\obj\Debug\net7.0\AlternovaData.pdb
 D:\Desarrollo C#\AlertNova Technical Assessment\AlternovaData\obj\Debug\net7.0\ref\AlternovaData.dll
+D:\Desarrollo C#\AlertNova Technical Assessment\AlternovaData\bin\Debug\net7.0\AlternovaData.runtimeconfig.json
+D:\Desarrollo C#\AlertNova Technical Assessment\AlternovaData\obj\Debug\net7.0\AlternovaData.genruntimeconfig.cache
