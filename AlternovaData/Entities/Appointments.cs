@@ -2,7 +2,7 @@
 
 using System.ComponentModel.DataAnnotations;
 
-namespace AlternovaData.Entities; 
+using AlternovaData.Entities;
 public class Appointment
 {
     [Key]

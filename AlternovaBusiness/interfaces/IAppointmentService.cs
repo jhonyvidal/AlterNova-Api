@@ -1,7 +1,11 @@
-using Appointment.Business.DTO;
 
-namespace Appointment.Core.Interface;
+
+using AlternovaBusiness.DTO;
+using AlternovaData.Entities;
+
+namespace AlternovaBusiness.Interface;
 public interface IAppointmentService {
-    Task<List<AppointmentDTO>> GetCarDetailsAsync();
-    bool IsDatabaseConnected();
+    public IEnumerable<Appointment> Get();
+    public Appointment Post(AppointmentDTO request);
+    public void Delete(int id);
 }

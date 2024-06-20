@@ -75,3 +75,4 @@ D:\Desarrollo C#\AlertNova Technical Assessment\AlternovaAPI\bin\Debug\net7.0\ru
 D:\Desarrollo C#\AlertNova Technical Assessment\AlternovaAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Desarrollo C#\AlertNova Technical Assessment\AlternovaAPI\bin\Debug\net7.0\BCrypt.Net-Next.dll
 D:\Desarrollo C#\AlertNova Technical Assessment\AlternovaAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Desarrollo C#\AlertNova Technical Assessment\AlternovaAPI\bin\Debug\net7.0\Newtonsoft.Json.dll

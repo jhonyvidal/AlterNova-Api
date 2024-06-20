@@ -1,4 +1,6 @@
+using AlternovaBusiness.Helper;
 using AlternovaBusiness.Interface;
+using AlternovaBusiness.interfaces;
 using AlternovaBusiness.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -39,6 +41,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 // Services
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAppointmentService, AppointmentServices>();
+builder.Services.AddScoped<IConfigService, ConfigServices>();
+builder.Services.AddScoped<IJwtHelper, JwtHelper>();
 
 // Controllers and Swagger
 builder.Services.AddControllers();
@@ -46,6 +51,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
 
 // Configure Swagger
 if (app.Environment.IsDevelopment())
@@ -55,6 +61,7 @@ if (app.Environment.IsDevelopment())
 }
 
 // Middleware pipeline
+app.UseMiddleware<JsonResponseMiddleware>();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

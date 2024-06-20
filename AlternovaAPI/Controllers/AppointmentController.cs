@@ -1,6 +1,7 @@
-using Appointment.Core.Interface;
+
+using AlternovaBusiness.DTO;
+using AlternovaBusiness.Interface;
 using Microsoft.AspNetCore.Mvc;
-// using Wheelzy.Core.Services;
 
 namespace AlternovaAPI.Controllers;
 
@@ -9,25 +10,54 @@ namespace AlternovaAPI.Controllers;
 public class AppointmentController : ControllerBase
 {
 
-    private readonly IAppointmentService _CarService;
+    private readonly IAppointmentService _AppointmentService;
 
     public AppointmentController(IAppointmentService service)
     {
-        _CarService = service;
+        _AppointmentService = service;
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetCarDetails()
+    public IActionResult Get()
     {
         try
         {
-            var carDetails = await _CarService.GetCarDetailsAsync();
+            var carDetails = _AppointmentService.Get();
             return Ok(carDetails);
         }
         catch (Exception ex)
         {
-            throw new Exception("An error occurred while retrieving car details", ex);
+            throw new Exception("An error occurred while retrieving", ex);
         }
+    }
+
+    [HttpPost()]
+    public IActionResult Post([FromBody] AppointmentDTO request)
+    {
+        try
+        {
+            var result = _AppointmentService.Post(request);
+            return Ok(result); 
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500,  ex.Message);
+        }
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult Delete(int id)
+    {
+    //    var Appointment = _AppointmentService.Get(id);
+            
+    //     if(Appointment == null)
+    //         return NotFound();
+        try{
+            _AppointmentService.Delete(id);
+        }catch(Exception ex){
+            return BadRequest(ex.Message);
+        }
+        return Ok();
     }
     
 }
