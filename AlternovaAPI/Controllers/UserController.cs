@@ -1,6 +1,9 @@
 using AlternovaBusiness.Interface;
+using AlternovaBusiness.Models;
+using AlternovaBusiness.Services;
 using AlternovaData.Entities;
 using Appointment.Core.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 // using Wheelzy.Core.Services;
 
@@ -19,6 +22,7 @@ public class UserController : ControllerBase
     }
 
     [HttpGet]
+    [Authorize]
     public  IActionResult Get()
     {
         try
@@ -45,5 +49,19 @@ public class UserController : ControllerBase
             return StatusCode(500, ex.Message);
         }
     }
-    
+
+    [HttpPost("login")]
+    public IActionResult Login([FromBody] LoginRequest request)
+    {
+        try
+        {
+            var token = _UserService.Login(request.Email, request.Password);
+            return Ok(new { Token = token });
+        }
+        catch (Exception ex)
+        {
+            return Unauthorized(ex.Message);
+        }
+    }
+
 }

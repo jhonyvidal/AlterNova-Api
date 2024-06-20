@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "uVXnMas5L+J15JhOMW+A79K3eFp8oVmSv4JdYWjRhb+e+cPpcX+futIypRgDe5R10UqxG0W3noyVlLyzHwKTBw==",
+  "dgSpecHash": "2VFiI/shBb+SGhKpIs6R6WZ2kYpEchkEjKwBB3UAwFHS5xgk2rc1Ah1YRX1tS5rYXXkasVVJCVhg3futfgrPLg==",
   "success": true,
   "projectFilePath": "D:\\Desarrollo C#\\AlertNova Technical Assessment\\AlternovaBusiness\\AlternovaBusiness.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jhony\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\jhony\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\jhony\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\jhony\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\jhony\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\jhony\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",

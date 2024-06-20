@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "A/h9Z6yT5RRPlK35i1iLDmqPSIMxuqYSQ3rxcLjXD+gw/svlWhcgilBBL2gJQ5Ck5dB4vKj9yLmcH0j5CtYmtA==",
+  "dgSpecHash": "3pN+01dQfk1/GLi8K0jPcp3mHLZ78haJ3w63jmcoI3bXPO2Twhg8wDDOffE+m1V2NONUzbf69FXK3+V6ktsZCg==",
   "success": true,
   "projectFilePath": "D:\\Desarrollo C#\\AlertNova Technical Assessment\\AlternovaTest\\AlternovaTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jhony\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\jhony\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\jhony\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\jhony\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
+    "C:\\Users\\jhony\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.20\\microsoft.aspnetcore.authentication.jwtbearer.7.0.20.nupkg.sha512",
     "C:\\Users\\jhony\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\jhony\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\jhony\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",

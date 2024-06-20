@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "n6fSdvD9+2lCs7Ej8p8n76DA+zBQZ7amUa8olgk8j8bBFeU24W8TPP+S+Gtk03atJyZ+ra5R2eJfJEukD1d3pg==",
+  "dgSpecHash": "Nyu/WbaYViVOj4Gjqed0LerbiI5MoqHW6ye12wQm+yZFxoBIF4tPF/9NQoj4qOu6la5Ra7W052wI1C4xssexpA==",
   "success": true,
   "projectFilePath": "D:\\Desarrollo C#\\AlertNova Technical Assessment\\AlternovaAPI\\AlternovaAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jhony\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\jhony\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\jhony\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\jhony\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.20\\microsoft.aspnetcore.authentication.jwtbearer.7.0.20.nupkg.sha512",
     "C:\\Users\\jhony\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\jhony\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\jhony\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
