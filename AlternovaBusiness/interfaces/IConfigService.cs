@@ -1,7 +1,6 @@
 
 
 using AlternovaBusiness.DTO;
-using AlternovaData.Entities;
 
 namespace AlternovaBusiness.Interface;
 public interface IConfigService {

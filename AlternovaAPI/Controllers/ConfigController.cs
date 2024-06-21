@@ -14,6 +14,7 @@ public class ConfigController : ControllerBase
 
     public ConfigController(IConfigService service)
     {
+        // Dependency injection of config service
         _ConfigService = service;
     }
 
@@ -23,10 +24,12 @@ public class ConfigController : ControllerBase
         try
         {
             var carDetails = _ConfigService.GetDoctor();
+             // Returns 200 OK with the fetched doctor
             return Ok(carDetails);
         }
         catch (Exception ex)
         {
+            // Returns 400 Bad Request with the exception message if deletion fails
             throw new Exception("An error occurred while retrieving", ex);
         }
     }
@@ -37,10 +40,12 @@ public class ConfigController : ControllerBase
         try
         {
             var carDetails = _ConfigService.GetType();
+             // Returns 200 OK with the fetched types
             return Ok(carDetails);
         }
         catch (Exception ex)
         {
+            // Returns 400 Bad Request with the exception message if deletion fails
             throw new Exception("An error occurred while retrieving", ex);
         }
     }

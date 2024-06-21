@@ -1,6 +1,5 @@
 ﻿using AlternovaBusiness.DTO;
 using AlternovaBusiness.Interface;
-using AlternovaData.Entities;
 
 namespace AlternovaBusiness.Services
 {

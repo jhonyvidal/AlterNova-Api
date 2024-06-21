@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace AlternovaBusiness.DTO;
 
 public class AppointmentDTO

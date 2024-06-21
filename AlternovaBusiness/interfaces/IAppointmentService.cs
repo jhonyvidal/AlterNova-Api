@@ -3,7 +3,6 @@
 using AlternovaBusiness.DTO;
 using AlternovaBusiness.Dtos;
 using AlternovaBusiness.Models;
-using AlternovaData.Entities;
 
 namespace AlternovaBusiness.Interface;
 public interface IAppointmentService {
