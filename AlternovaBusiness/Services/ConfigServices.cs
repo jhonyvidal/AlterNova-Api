@@ -13,8 +13,18 @@ namespace AlternovaBusiness.Services
             _context = context;
         }
 
-        public IEnumerable<Doctor> GetDoctor() => _context.Doctor.ToList();
-        public IEnumerable<TypeAppointment> GetType() => _context.TypeAppointment.ToList();
+        public IEnumerable<DoctorDTO> GetDoctor() => _context.Doctor.Select(a => new DoctorDTO
+        {
+            Id = a.Id,
+            Name = a.Name,
+        })
+        .ToList();
+        public IEnumerable<TypeDTO> GetType() => _context.TypeAppointment.Select(a => new TypeDTO
+        {
+            Id = a.Id,
+            Name = a.Name,
+        })
+        .ToList();
 
     }
 }

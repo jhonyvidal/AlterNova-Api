@@ -6,6 +6,10 @@ update `appsettings.json`  in `ConnectionStrings.DefaultConnection` Make sure th
 
 Ensure that your database connection string is correctly configured file for Entity Framework Core migrations to work properly.
 
+## Doctors and Types
+
+To insert mock data to doctor and type entities use `Query.sql` file.
+
 ## Add Migration
 
 Navigate to API Project

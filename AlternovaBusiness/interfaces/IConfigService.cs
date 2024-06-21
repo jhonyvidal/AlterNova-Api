@@ -5,7 +5,7 @@ using AlternovaData.Entities;
 
 namespace AlternovaBusiness.Interface;
 public interface IConfigService {
-    public IEnumerable<Doctor> GetDoctor();
-    public IEnumerable<TypeAppointment> GetType();
+    public IEnumerable<DoctorDTO> GetDoctor();
+    public IEnumerable<TypeDTO> GetType();
 
 }

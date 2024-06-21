@@ -1,4 +1,5 @@
 ﻿using AlternovaBusiness.DTO;
+using AlternovaBusiness.Dtos;
 using AlternovaBusiness.Interface;
 using AlternovaBusiness.Models;
 using Microsoft.EntityFrameworkCore;
@@ -14,9 +15,12 @@ namespace AlternovaBusiness.Services
             _context = context;
         }
 
-        public IEnumerable<AppointmentDTO> Get(int id, int pageNumber, int pageSize)
+        public PaginationResult<AppointmentDTO> Get(int id, int pageNumber, int pageSize)
         {
-            return _context.Appointment
+            var totalRecords = _context.Appointment.Count(a => a.PatientId == id);
+            var totalPages = (int)Math.Ceiling(totalRecords / (double)pageSize);
+
+            var appointments = _context.Appointment
                 .Include(a => a.Doctor)
                 .Include(a => a.TypeAppointment)
                 .Where(a => a.PatientId == id)
@@ -33,6 +37,15 @@ namespace AlternovaBusiness.Services
                     PatientId = a.PatientId,
                 })
                 .ToList();
+
+            return new PaginationResult<AppointmentDTO>
+            {
+                CurrentPage = pageNumber,
+                TotalPages = totalPages,
+                PageSize = pageSize,
+                TotalCount = totalRecords,
+                Data = appointments
+            };
         }
         public Appointment Post(AppointmentRequest request, int i)
         {
