@@ -1,10 +1,12 @@
 using AlternovaBusiness.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AlternovaAPI.Controllers;
 
 [ApiController]
 [Route("[controller]/[action]")]
+[Authorize]
 public class ConfigController : ControllerBase
 {
 

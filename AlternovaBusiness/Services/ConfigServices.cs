@@ -1,53 +1,20 @@
 ﻿using AlternovaBusiness.DTO;
 using AlternovaBusiness.Interface;
+using AlternovaData.Entities;
 
 namespace AlternovaBusiness.Services
 {
-    public class AppointmentServices : IAppointmentService
+    public class ConfigServices : IConfigService
     {
         private readonly AppDbContext _context;
 
-        public AppointmentServices(AppDbContext context)
+        public ConfigServices(AppDbContext context)
         {
             _context = context;
         }
 
-        public IEnumerable<Appointment> Get() => _context.Appointment.ToList();
-        public Appointment Post(AppointmentDTO request)
-        {
-            var newAppointment = new Appointment
-            {
-                FechaHora = request.FechaHora,
-                comment = request.Comment,
-                PatientId = request.PatientId,
-                DoctorId = request.DoctorId,
-                TypeAppointmentId = request.TypeAppointmentId,
-            };
-            try
-            {
-                _context.Appointment.Add(newAppointment);
-                _context.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Failed to create Appointment.", ex);
-            }
-            return newAppointment;
-        }
-
-        public void Delete(int id)
-        {
-            var itemToRemove = _context.Appointment.FirstOrDefault(d => d.Id == id);
-            if (itemToRemove != null)
-            {
-                _context.Appointment.Remove(itemToRemove);
-                _context.SaveChanges();
-            }
-            else
-            {
-                throw new KeyNotFoundException("Id not Found.");
-            }
-        }
+        public IEnumerable<Doctor> GetDoctor() => _context.Doctor.ToList();
+        public IEnumerable<TypeAppointment> GetType() => _context.TypeAppointment.ToList();
 
     }
 }

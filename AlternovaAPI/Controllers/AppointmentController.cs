@@ -1,12 +1,15 @@
 
 using AlternovaBusiness.DTO;
 using AlternovaBusiness.Interface;
+using AlternovaBusiness.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AlternovaAPI.Controllers;
 
 [ApiController]
 [Route("[controller]/[action]")]
+[Authorize]
 public class AppointmentController : ControllerBase
 {
 
@@ -18,11 +21,17 @@ public class AppointmentController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult Get()
+    public IActionResult Get([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
     {
+        var userIdClaim = User.FindFirst("id");
+        if (userIdClaim == null)
+        {
+            return Unauthorized("No valid 'id' claim found in token.");
+        }
+        int userId = int.Parse(userIdClaim.Value);
         try
         {
-            var carDetails = _AppointmentService.Get();
+            var carDetails = _AppointmentService.Get(userId, pageNumber, pageSize);
             return Ok(carDetails);
         }
         catch (Exception ex)
@@ -32,11 +41,17 @@ public class AppointmentController : ControllerBase
     }
 
     [HttpPost()]
-    public IActionResult Post([FromBody] AppointmentDTO request)
+    public IActionResult Post([FromBody] AppointmentRequest request)
     {
+        var userIdClaim = User.FindFirst("id");
+        if (userIdClaim == null)
+        {
+            return Unauthorized("No valid 'id' claim found in token.");
+        }
+        int userId = int.Parse(userIdClaim.Value);
         try
         {
-            var result = _AppointmentService.Post(request);
+            var result = _AppointmentService.Post(request, userId);
             return Ok(result); 
         }
         catch (Exception ex)

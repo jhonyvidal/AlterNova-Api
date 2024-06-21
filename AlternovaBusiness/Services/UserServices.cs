@@ -1,3 +1,4 @@
+using AlternovaBusiness.DTO;
 using AlternovaBusiness.Helper;
 using AlternovaBusiness.Interface;
 using AlternovaBusiness.interfaces;
@@ -21,7 +22,17 @@ namespace AlternovaBusiness.Services
             _context = context;
             _jwtService = jwtService;
         }
-        public IEnumerable<User> Get() => _context.User.ToList();
+        public IEnumerable<UserDTO> Get()
+        {
+            return _context.User.Select(user => new UserDTO
+            {
+                Id = user.Id,
+                Name = user.Name,
+                LastName = user.LastName,
+                Email = user.Email
+            })
+            .ToList();
+        }
 
 
         public User Post(User request)

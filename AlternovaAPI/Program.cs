@@ -45,6 +45,17 @@ builder.Services.AddScoped<IAppointmentService, AppointmentServices>();
 builder.Services.AddScoped<IConfigService, ConfigServices>();
 builder.Services.AddScoped<IJwtHelper, JwtHelper>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyPolicy",
+                      policy =>
+                      {
+                          policy.AllowAnyOrigin()
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+                      });
+});
+
 // Controllers and Swagger
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -60,6 +71,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors("MyPolicy");
 // Middleware pipeline
 app.UseMiddleware<JsonResponseMiddleware>();
 app.UseHttpsRedirection();
