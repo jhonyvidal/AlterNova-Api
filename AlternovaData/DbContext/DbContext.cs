@@ -12,5 +12,6 @@ public class AppDbContext : DbContext
     public DbSet<User> User { get; set; }
     public DbSet<TypeAppointment> TypeAppointment { get; set; }
     public DbSet<Doctor> Doctor { get; set; }
+    public DbSet<TestEntitie> Test { get; set; }
 
 }

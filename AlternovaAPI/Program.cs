@@ -1,6 +1,7 @@
 using AlternovaBusiness.Helper;
 using AlternovaBusiness.Interface;
 using AlternovaBusiness.interfaces;
+using AlternovaBusiness.Interfaces;
 using AlternovaBusiness.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -44,6 +45,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAppointmentService, AppointmentServices>();
 builder.Services.AddScoped<IConfigService, ConfigServices>();
 builder.Services.AddScoped<IJwtHelper, JwtHelper>();
+builder.Services.AddScoped<ITest, TestServices>();
 
 builder.Services.AddCors(options =>
 {

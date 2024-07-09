@@ -30,7 +30,7 @@ namespace AlternovaBusiness.Services
                 .Include(a => a.Doctor) 
                 .Include(a => a.TypeAppointment) 
                 .Where(a => a.PatientId == id) 
-                .OrderBy(a => a.Id) 
+                .OrderByDescending(a => a.Id) 
                 .Skip((pageNumber - 1) * pageSize) 
                 .Take(pageSize) 
                 .Select(a => new AppointmentDTO 
